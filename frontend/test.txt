@@ -1,0 +1,10 @@
+POST /sample.jsp HTTP/1.1
+Accept: image/gif.image/jpeg,*/*
+Accept-Language: zh-cn
+Connection: Keep-Alive
+Host: localhost
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry; zimao=wang
+User-Agent: Mozila/4.0(compatible;MSIE5.01;Window NT5.0)
+Accept-Encoding: gzip,deflate
+ 
+username=jinqiao&password=1234

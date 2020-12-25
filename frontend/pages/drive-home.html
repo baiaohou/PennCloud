@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cloud Drive</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				☁️ Cloud Drive    &nbsp;
+				<!-- <button onclick="window.location.href='/mail-send.html'" class="btn btn-warning">➕  COMPOSE</button>&nbsp; -->
+				<button onclick="window.location.href='/'" class="btn btn-info">🔙  HOMEPAGE</button>
+			</h3>
+
+		</div>
+	</div>
+	<h3>
+		Current Directory: <i>$directory</i>&nbsp;
+		<button onclick="window.location.href='/drive-home.html'" class="btn btn-secondary">🏡  Go to root directory</button>
+		<form method="POST" action="/newFolder" class="form-horizontal">
+			<input name="foldername" placeholder="foldername" />
+			<button name="filedirectory" value=$directory class="btn btn-default">Create new folder</button>
+		</form>
+	</h3> 
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>
+							Name
+						</th>
+						<th>
+							
+						</th>
+						<th>
+							
+						</th>
+						<th>
+							
+						</th>
+						<th>
+							
+						</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<form method="POST" action="/upload" enctype="multipart/form-data" class="form-horizontal">
+							<input name="filedirectory" value=$directory style="display:none;" />
+							<input name="filename" type="file" class="form-control-file"$directory id="exampleInputFile""/>
+							
+							<button class="btn btn-default">Upload Files</button>
+						</form>
+					</tr>
+					$content
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+	<script>
+	//<input name="filename" type="file" class="form-control-file"$directory id="exampleInputFile" onchange="processFiles(this.files)"/>
+	//<textarea name="filecontent" id="fileOutput" style="display:none;"></textarea>
+	    function processFiles(files) {
+	      var file = files[0];
+	      var reader = new FileReader();
+	      reader.onload = function (e) {
+	        var output = document.getElementById("fileOutput");  
+	        output.value = e.target.result;
+	      };
+	      reader.readAsText(file);
+	    }
+	</script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

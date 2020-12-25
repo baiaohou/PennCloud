@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome home!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      
+
+    <div class="container-fluid">
+        
+	<div class="row">
+		<div class="col-md-12">
+            <br>
+			<h1 class="text-center">
+				Welcome back, $name! 
+				<button onclick="window.location.href='/logout'" class="btn btn-danger">🔙 LOGOUT</button>&nbsp;
+            </h1>
+            <br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h2>
+				Mail Service 📮
+			</h2>
+			<p>
+                <a style='color:darkgreen'>🎊 Here is your PennCloud Mailbox! 🎊 </a> <br>
+                Check out your inbox and send emails to friends!
+			</p>
+			<p>
+				<button onclick="window.location.href='/mail-home.html'" class="btn btn-default">Go to MAIL 📨</button>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				Cloud Storage ☁️
+			</h2>
+			<p>
+                <a style='color:darkslateblue'>🎊 Here is your PennCloud Storage Space! 🎊 </a> <br>
+                Feel free to upload files and customize your own folders! 
+			</p>
+			<p>
+				<button onclick="window.location.href='/drive-home.html'" class="btn btn-default">Go to DRIVE ⏫</button>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				Admin Console 🔎
+			</h2>
+			<p>
+                <a style='color:darkred'>⚠️ Admin Users ONLY ⚠️</a>
+                <br>
+                See all server-status and storage info here.
+			</p>
+			<p>
+				<button onclick="window.location.href='/admin.html'" class="btn btn-default">Go to CONSOLE 💻</button>
+			</p>
+		</div>
+	</div>
+</div>
+  </body>
+</html>

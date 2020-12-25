@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1></h1>
+                <br>
+                <div class="jumbotron">
+            			&nbsp;&nbsp;&nbsp;		
+                        <button onclick="window.location.href='/'" class="btn btn-info">🔙  HOMEPAGE</button>
+                        &nbsp;
+                        <button onclick="window.location.href='/mail-home.html'" class="btn btn-success">📮  INBOX</button>
+                    <form method="POST" action="/compose" class="form-horizontal">
+                        <h3 style="color:darkblue">
+                        ✉️ <b>Email Details</b> 
+                        
+                        </h3>
+                        <p>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                From:
+                            </label>
+                            $from
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Subject:
+                            </label>
+                            $subject
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Content:
+                            </label>
+                        </div>
+                        <h1></h1>
+                        <textarea name="msg_content" cols="100" rows="10" disabled="disabled">$content</textarea>
+                    </form>
+                    <h1></h1>
+                    <form action='/mail-reply.html' method='post'>
+						<button name='rcptEmail' value='$from' class='btn btn-danger'>Reply This Email</button>
+					</form>
+					<h1></h1>
+                    <form action='/mail-forward.html' method='post'>
+                    	<input name="oldSubject" value="$subject" style="display:none;">
+						<button name='entireMessage' value='$entireMessage' class='btn btn-warning'>Forward This Email</button>
+					</form>
+                </div>
+				
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+From <zimao@localhost> Sat Nov 21 08:24:01 2020
+To: zimao@localhost
+From: Zimao Wang <zimao@localhost>
+Subject: test (send this with POP3 server closed)
+Message-ID: <b49a2b50-b6b0-efaf-12a3-9d835363b78c@localhost>
+Date: Sat, 21 Nov 2020 03:24:01 -0500
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.10.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+
+When I send this email, the mbox can accept it, but thunderbird cannot 
+see it in inbox.
+
+However, if I open POP3 server and click get messages, I should see it 
+in inbox.
+
+From <j@3> Sat Nov 21 11:46:09 2020
+
+From <3@> Sat Nov 21 11:51:29 2020
+321
+From <3@3> Sat Nov 21 11:54:19 2020
+456
+
+
+
+
+
+
+From <33@33> Sat Nov 21 12:17:22 2020
+123
+321
+1234567
+From <333@333> Sat Nov 21 12:18:12 2020
+what is wrong!
+the ++ for pointer is so unreliabl
+e
+
+!
+From <33@dahs> Sat Nov 21 12:49:00 2020
+dash
+ggg
+ok
+
+3
+
+From <3@localhost> Sat Nov 21 13:16:08 2020
+123
+33
+From <3213@321> Sat Nov 21 13:47:39 2020
+the first character in rcpt to should be
+<
+From <32@> Sat Nov 21 13:52:03 2020
+hi
+after fix <
+?
+From <dd@localhost> Sat Nov 21 14:23:31 2020
+hi
+this is SMTP!

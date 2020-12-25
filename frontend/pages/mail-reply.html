@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reply Email</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1></h1>
+                <br>
+                <div class="jumbotron">
+            			&nbsp;&nbsp;&nbsp;		
+                        <button onclick="window.location.href='/'" class="btn btn-info">🔙  HOMEPAGE</button>
+                        &nbsp;
+                        <button onclick="window.location.href='/mail-home.html'" class="btn btn-success">📮  INBOX</button>
+                    <form method="POST" action="/compose" class="form-horizontal">
+                        <h3 style="color:darkblue">
+                        🔙 <b>Reply Email</b> 
+                        
+                        </h3>
+                        <p>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                From:
+                            </label>
+                            <input type="email" class="form-control" id="authorname" value="$this_email" disabled="disabled"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Reply To:&nbsp;&nbsp;&nbsp;&nbsp;
+                            </label>
+                            <input name="rcpt_address" type="email" class="form-control" id="authorname" value="$rcpt_email" readonly="readonly"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Subject:
+                            </label>
+                            <input name="msg_subject" class="form-control" id="recipient_email"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Content
+                            </label>
+                        </div>
+                        <textarea name="msg_content" cols="100" rows="10"></textarea>
+                        <h1></h1>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">👌 Send</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

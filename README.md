@@ -11,6 +11,7 @@ Baiao Hou, Xuening Zhang, Zemin Zhao, Zimao Wang
 
 ***University of Pennsylvania***
 
+![Structure Design](https://photos.app.goo.gl/ChQmfef6gsqR8Y2X7)
 
 ## Running by Shell Scripts
 
